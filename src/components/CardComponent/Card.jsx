@@ -5,7 +5,11 @@ function Card({ id, name, model, brand, price }) {
   const [bestSeller, setBestSeller] = useState("");
 
   const clickedProduct = (id) => {
-    setBestSeller(id);
+    if (bestSeller === id) {
+      setBestSeller("");
+    } else {
+      setBestSeller(id);
+    }
   };
 
   return (
