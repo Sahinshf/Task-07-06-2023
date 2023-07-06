@@ -1,13 +1,6 @@
-import React, { useState } from "react";
 import List from "./ListComponent/List";
 
 function Content() {
-  const [bestSeller, setBestSeller] = useState("");
-
-  const clickedProduct = (id) => {
-    setBestSeller(id);
-  };
-
   const products = [
     {
       id: 1,
@@ -48,11 +41,7 @@ function Content() {
 
   return (
     <div>
-      <List
-        products={products}
-        clickedProduct={clickedProduct}
-        bestSeller={bestSeller}
-      />
+      <List products={products} />
     </div>
   );
 }
